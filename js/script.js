@@ -1,7 +1,10 @@
 // global variables
 const mainUl = document.querySelector('ul');
 const mainLi = document.querySelectorAll('li');
+const pageHeaderDiv = document.querySelector('div.page-header.cf')
+
 const numberOfPage = Math.ceil(54 / 10) + 1;
+
 
 //Create and append elements
 const pagination = document.createElement('div');
@@ -9,6 +12,17 @@ pagination.className = "pagination";
 mainUl.appendChild(pagination);
 const ul = document.createElement('ul');
 pagination.appendChild(ul);
+
+// Add search button
+const searchDiv = document.createElement("div");
+searchDiv.className = "student-search";
+pageHeaderDiv.appendChild(searchDiv);
+const search = document.createElement('input');
+search.place = "Search for students...";
+const searchButton = document.createElement('button');
+searchButton.textContent = "Search";
+searchDiv.appendChild(search);
+searchDiv.appendChild(searchButton);
 
 
 // Show every 10 studens
