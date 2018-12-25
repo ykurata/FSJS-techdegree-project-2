@@ -5,7 +5,7 @@ const pageHeaderDiv = document.querySelector('div.page-header.cf')
 const numberOfStudents = mainLi.length;
 const studentsName = document.querySelectorAll('h3');
 
-const numberOfPage = Math.ceil(54 / 10) + 1;
+const numberOfPage = Math.ceil(numberOfStudents / 10) + 1;
 
 // Create search input and button
 const searchDiv = createElement("div", "className", "student-search")
