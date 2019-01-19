@@ -13,8 +13,15 @@ In this project, you'll enhance the usability of a web page that is displaying w
   * When the page first loads your program should show only the first ten students, and hide all the rest.
 
 * Create and append the pagination links
+  * Look at the HTML in the examples/example-meets.html file on lines 119-137 -- this is an example of the markup you'll need to dynamically create and add to the DOM to create the necessary pagination links. You'll need to create each part dynamically, including the container.
+  * Since no more than 10 students should be shown at a time, your programming needs to calculate the number of pages needed and add the appropriate number of links to the bottom of the page. This can be accomplished with simple division - the total number of students divided by the max number of students on each page and rounded up. So 54 students divided by ten, rounded up, equals 6 pages.
+  * Your program should work for any number of students. You can test your code by checking the examples/44students.html and examples/64 students.html files.
 
 * Add functionality to pagination links with an event listener
+  * When one of the pagination links are clicked, the CSS "active" class should be updated on the buttons, meaning it is removed from the previously active button and added to the currently active button.
+  * When a user clicks on “2” in the pagination links, students 11 through 20 should be displayed. When a user clicks “3”, students 21 through 30 be displayed. And so on until we get to the last page, number "6" in this project, which should display students 51 through 55. And remember that indexes start at zero, not one. So to show students 1 - 10, you'll be working with student indexes 0 - 9.
+  * Since the pagination links are being generated dynamically, it's important to be mindful of when and where you add functionality to the buttons, because if the code that adds the functionality runs before the buttons are created, then the buttons won't have any of the intended functionality.
+  * If you created a function to show/hide students at the beginning of this project, then you can use that function here in the event listener attached to the buttons to make each each button show/hide the correct sets of students.
 
 * Add code comments.
 
